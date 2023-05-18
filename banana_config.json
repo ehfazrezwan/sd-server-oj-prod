@@ -1,14 +1,16 @@
 {
-    "name": "Openjourney",
-    "category": "Computer Vision",
-    "example_input": {
-      "prompt": "retro serie of different cars with different colors and shapes, mdjrny-v4 style",
-      "negative": "",
-      "num_inference_steps": 50,
-      "guidance_scale": 7.5
-    },
-    "example_output": {
-      "image_base64": "<BASE64_STRING>"
-    }
+  "name": "StableDiffusion - OpenJourney V4 + Any model",
+  "category": "Computer Vision",
+  "example_input": {
+    "prompt": "retro series of different cars with different colors and shapes, mdjrny-v4 style",
+    "negative": "",
+    "num_inference_steps": 50,
+    "guidance_scale": 7.5,
+    "height": 768,
+    "width": 512
+  },
+  "example_output": {
+    "image_base64": "<BASE64_STRING>"
+  },
+  "version": "1.0.0"
 }
-  
