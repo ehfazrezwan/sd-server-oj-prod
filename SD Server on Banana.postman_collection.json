@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "54b0518c-28d3-4e1f-b543-275740fc36eb",
+		"name": "SD Server on Banana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24657449"
+	},
+	"item": [
+		{
+			"name": "Start Generation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var res = pm.response.json();",
+							"pm.collectionVariables.set(\"callID\", res.callID);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"apiKey\": \"{{apiKey}}\",\n    \"modelKey\": \"{{modelKey}}\",\n    \"startOnly\": true,\n    \"modelInputs\": {\n        \"prompt\": \"nightclub\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.banana.dev/start/v4/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"banana",
+						"dev"
+					],
+					"path": [
+						"start",
+						"v4",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"apiKey\": \"{{apiKey}}\",\n    \"callID\": \"{{callID}}\",\n    \"longPoll\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.banana.dev/check/v4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"banana",
+						"dev"
+					],
+					"path": [
+						"check",
+						"v4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiKey",
+			"value": "3a79eef5-7ec7-40ef-be8f-be757e58f6e0",
+			"type": "string"
+		},
+		{
+			"key": "modelKey",
+			"value": "9edbdd67-2078-4eff-935f-6a0b62c869f3",
+			"type": "string"
+		},
+		{
+			"key": "callID",
+			"value": "call_a326d8d8-ad6e-4b2e-b0fb-cce6fba14dbf",
+			"type": "string"
+		}
+	]
+}
