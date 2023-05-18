@@ -166,6 +166,8 @@ You will notice that you'll need your banana.dev API Key and Model Key, both of 
       <br/>
       <br/>
 
+   **Inference engine still running**:
+
    ```json
    {
      "id": "de874913-cf15-43ba-84be-f8b1121b62b0",
@@ -175,6 +177,22 @@ You will notice that you'll need your banana.dev API Key and Model Key, both of 
      "callID": "call_0d82c386-cb9f-4da6-89b4-236c4b69bb47",
      "finished": false,
      "modelOutputs": null
+   }
+   ```
+
+   **Inference complete**:
+
+   ```json
+   {
+     "id": "3b0fc375-6b0c-4552-bacc-5340a61e66d5",
+     "message": "success",
+     "created": 1684445192,
+     "apiVersion": "January 11, 2023",
+     "modelOutputs": [
+       {
+         "image_base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAA"
+       }
+     ]
    }
    ```
 

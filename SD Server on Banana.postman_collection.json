@@ -103,17 +103,17 @@
 	"variable": [
 		{
 			"key": "apiKey",
-			"value": "3a79eef5-7ec7-40ef-be8f-be757e58f6e0",
+			"value": "",
 			"type": "string"
 		},
 		{
 			"key": "modelKey",
-			"value": "9edbdd67-2078-4eff-935f-6a0b62c869f3",
+			"value": "",
 			"type": "string"
 		},
 		{
 			"key": "callID",
-			"value": "call_a326d8d8-ad6e-4b2e-b0fb-cce6fba14dbf",
+			"value": "",
 			"type": "string"
 		}
 	]
