@@ -14,7 +14,7 @@ def init():
 
     # model_id is the HuggingFace model ID that you set in the Banana Console
     # i.e. in "Build Arguments" on your model settings page. Defaults to OpenJourney v4
-    model_id = os.environ.get("MODEL_ID", "prompthero/openjourney-v4")
+    model_id = "prompthero/openjourney-v4"
 
     t1 = time.time()
     model = StableDiffusionPipeline.from_pretrained(model_id).to("cuda")
