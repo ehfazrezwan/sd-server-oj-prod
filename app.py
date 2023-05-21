@@ -2,6 +2,7 @@ import time
 import os
 import base64
 from io import BytesIO
+import torch
 from torch import autocast
 from diffusers import StableDiffusionPipeline
 
