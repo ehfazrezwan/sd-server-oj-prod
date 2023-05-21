@@ -2,6 +2,7 @@
 # It runs during container build time to get model weights built into the container
 import os
 import time
+import torch
 from diffusers import StableDiffusionPipeline
 
 
